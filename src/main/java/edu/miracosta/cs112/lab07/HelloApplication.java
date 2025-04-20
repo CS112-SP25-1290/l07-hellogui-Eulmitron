@@ -64,10 +64,17 @@ public class HelloApplication extends Application implements EventHandler  { //i
 
 
     }
+
+    int buttonPresses;
+
+
     @Override
     public void handle(Event event){
         if (event.getSource() == button1) {
             label1.setText("New Text");
+        }
+        if (event.getSource() == button2) {
+            label2.setText("" + ++buttonPresses);
         }
 
 
